@@ -1,8 +1,7 @@
 import React, { useState, Children, cloneElement, useEffect } from "react";
 
-// TabView.Tab subcomponent
 function Tab({ label, children }) {
-  return <>{children}</>; // Just a wrapper
+  return <>{children}</>; 
 }
 
 function TabView({
@@ -40,13 +39,11 @@ function TabView({
         ))}
       </div>
 
-      {/* Active Tab Content */}
       <div>{tabs[activeIndex]}</div>
     </div>
   );
 }
 
-// Attach Tab subcomponent
 TabView.Tab = Tab;
 
 export default TabView;

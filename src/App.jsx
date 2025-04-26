@@ -13,7 +13,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <h1>Custom TabView with Children</h1>
+        <h1>Custom TabView</h1>
 
         <TabView
           activeTabOverride={activeTabOverride}
