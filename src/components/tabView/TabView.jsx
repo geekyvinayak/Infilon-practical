@@ -1,7 +1,7 @@
 import React, { useState, Children, cloneElement, useEffect } from "react";
 
 function Tab({ label, children }) {
-  return <>{children}</>; 
+  return <>{children}</>;
 }
 
 function TabView({

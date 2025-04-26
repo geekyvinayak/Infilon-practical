@@ -1,14 +1,43 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { setUsers } from "../../store/apiDataSlice";
 
 function UserTable({ users }) {
+  const dispatch = useDispatch();
+
+  const resetUsers = () => {
+    dispatch(setUsers({}));
+  };
+
   if (!users.length) {
     return null;
   }
 
   return (
     <div className="user-table-container">
-      <h2>User Data</h2>
-
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h2>Users Data</h2>
+        <button
+          onClick={resetUsers}
+          style={{
+            padding: "8px 16px",
+            backgroundColor: "",
+            color: "white",
+            border: "none",
+            height: "50px",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+        >
+          Reset Users
+        </button>
+      </div>
       {users.length > 0 ? (
         <table className="user-table">
           <thead>

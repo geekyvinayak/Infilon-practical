@@ -33,7 +33,7 @@ function TabThree() {
   };
 
   return (
-    <>
+    <div style={{ display: "flex", gap: "40px" }}>
       <div>
         <h2>Recursive Task</h2>
         <form onSubmit={handleSubmit}>
@@ -82,7 +82,7 @@ function TabThree() {
         )}
       </div>
       <UserTable users={users} />
-    </>
+    </div>
   );
 }
 
